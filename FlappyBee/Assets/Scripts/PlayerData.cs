@@ -11,9 +11,11 @@ public class PlayerData : MonoBehaviour
 		private Text _scoreCountText;
 		private int _score;
 		[SerializeField]
+		private int _hp;
+		[SerializeField]
 		private HpBar _hpBar;
 		[SerializeField]
-		private int _hp;
+		private GameOverWindow _gameOverWindow;
 		[Tooltip("Время в течении которого пчела будет бессмертна после получения урона")]
 		public float GodModeTimeAfterDamage = 0f;
 
@@ -27,7 +29,16 @@ public class PlayerData : MonoBehaviour
 		{
 				_hp--;
 				_hpBar?.UpdateHp(_hp);
-				AnimateGodMode();
+
+				if(_hp <= 0)
+				{
+						_gameOverWindow.SetScore(_score);
+						_gameOverWindow.gameObject.SetActive(true);
+				}
+				else
+				{
+						AnimateGodMode();
+				}
 		}
 
 		public void AddScore(int score)

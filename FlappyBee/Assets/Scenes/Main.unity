@@ -583,7 +583,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Score:'
+  m_Text: '[score]'
 --- !u!222 &512252303
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1454,8 +1454,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scoreCountText: {fileID: 1312603180}
-  _hpBar: {fileID: 504400556}
   _hp: 3
+  _hpBar: {fileID: 504400556}
+  _gameOverWindow: {fileID: 0}
   GodModeTimeAfterDamage: 2
 --- !u!114 &1971575933
 MonoBehaviour:
