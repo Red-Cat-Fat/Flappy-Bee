@@ -101,6 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Once: 1
+  _score: 1
 --- !u!114 &4443314538234815463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -373,10 +374,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4687335791542993051}
   - component: {fileID: 1340916339717164233}
-  - component: {fileID: 1698427164179645813}
+  - component: {fileID: 6706690069962373983}
   m_Layer: 0
   m_Name: ScoreTrigger
-  m_TagString: Wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -421,7 +422,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 20}
   m_EdgeRadius: 0
---- !u!114 &1698427164179645813
+--- !u!114 &6706690069962373983
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -430,9 +431,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8979116407712421370}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db6dfb7ce2ca4169b4f0f660f4801bf0, type: 3}
+  m_Script: {fileID: 11500000, guid: e3a2fc96c20448ac8d1c40030fda81a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Actions:
   - {fileID: 1039686678503335636}
   FilterTag: Player
+  OnExit: 1
