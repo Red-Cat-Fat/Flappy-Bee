@@ -488,9 +488,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfc72af7d60d6244bb5613fe27bd3de4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rigidbody2D: {fileID: 1971575928}
   KeyCode: 32
   Force: {x: 0, y: 1}
+  Rigidbody2D: {fileID: 1971575928}
 --- !u!114 &1971575931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -518,7 +518,7 @@ GameObject:
   - component: {fileID: 2014096600}
   m_Layer: 0
   m_Name: WallKiller
-  m_TagString: Untagged
+  m_TagString: WallKiller
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
