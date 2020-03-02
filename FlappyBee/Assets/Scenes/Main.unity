@@ -547,9 +547,9 @@ RectTransform:
   m_Father: {fileID: 277794418}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 400, y: -288.85}
   m_SizeDelta: {x: 800, y: 130.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &512252302
@@ -1208,9 +1208,9 @@ RectTransform:
   m_Father: {fileID: 277794418}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 400, y: -492.56665}
   m_SizeDelta: {x: 621, y: 152.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1656437734
@@ -1255,7 +1255,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1656437735}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2105941125}
+        m_MethodName: OnRestartButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1656437735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1324,9 +1335,9 @@ RectTransform:
   m_Father: {fileID: 277794418}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 400, y: -96.28333}
   m_SizeDelta: {x: 800, y: 130.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1921971297
@@ -1456,7 +1467,7 @@ MonoBehaviour:
   _scoreCountText: {fileID: 1312603180}
   _hp: 3
   _hpBar: {fileID: 504400556}
-  _gameOverWindow: {fileID: 0}
+  _gameOverWindow: {fileID: 2105941125}
   GodModeTimeAfterDamage: 2
 --- !u!114 &1971575933
 MonoBehaviour:
@@ -1825,13 +1836,14 @@ GameObject:
   - component: {fileID: 2105941122}
   - component: {fileID: 2105941124}
   - component: {fileID: 2105941123}
+  - component: {fileID: 2105941125}
   m_Layer: 5
   m_Name: GameOverPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2105941122
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1888,3 +1900,16 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2105941121}
   m_CullTransparentMesh: 0
+--- !u!114 &2105941125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2105941121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efbe2dce2bfddb84d95c5e6a098b5212, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scoreText: {fileID: 512252302}
