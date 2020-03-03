@@ -15,7 +15,7 @@ public class CounterScriptableObject : ScriptableObject
 	[SerializeField]
 	private bool _resetOnNewGame = true;
 
-	public IntParamEvent UpdateScore;
+	public event Action<int> UpdateScore;
 	public void OnEnable()
 	{
 		if (_resetOnNewGame)

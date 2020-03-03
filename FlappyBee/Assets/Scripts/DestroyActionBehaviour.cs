@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DestroyAction : Action
+public class DestroyActionBehaviour : ActionBehaviour
 {
 	public bool DestroyOther;
 

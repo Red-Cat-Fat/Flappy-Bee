@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public abstract class Action : MonoBehaviour
+public abstract class ActionBehaviour : MonoBehaviour
 {
 	public bool Once;
 

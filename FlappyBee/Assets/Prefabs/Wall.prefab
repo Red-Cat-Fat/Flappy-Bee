@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 7002949691604054407}
   - component: {fileID: 7002949691604054406}
   - component: {fileID: 7002949691604054408}
-  - component: {fileID: 1039686678503335636}
   - component: {fileID: 4443314538234815463}
+  - component: {fileID: 8453088725476918469}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Untagged
@@ -88,21 +88,6 @@ MonoBehaviour:
   Down: {fileID: 7002949692571023359}
   From: 1.5
   To: 2.5
---- !u!114 &1039686678503335636
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7002949691604054404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f5b186a0faf49b408e9bdb6a3997b67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Once: 1
-  _addScore: 1
-  _scoreCounter: {fileID: 11400000, guid: b70f68620da222d4abe77b963f5daf8e, type: 2}
 --- !u!114 &4443314538234815463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,6 +102,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Once: 1
   DestroyOther: 0
+--- !u!114 &8453088725476918469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7002949691604054404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f5b186a0faf49b408e9bdb6a3997b67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Once: 1
+  _addScore: 1
+  _scoreCounter: {fileID: 11400000, guid: b70f68620da222d4abe77b963f5daf8e, type: 2}
 --- !u!1 &7002949692265030145
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,6 +436,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Actions:
-  - {fileID: 1039686678503335636}
+  - {fileID: 8453088725476918469}
   FilterTag: Player
   OnExit: 1

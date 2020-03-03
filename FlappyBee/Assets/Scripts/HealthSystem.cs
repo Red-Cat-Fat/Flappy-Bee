@@ -19,9 +19,11 @@ public class HealthSystem : MonoBehaviour
 	private SpriteRenderer _beeSpriteRenderer;
 	[Tooltip("Время в течении которого пчела будет бессмертна после получения урона")]
 	public float GodModeTimeAfterDamage = 0f;
-
 	[SerializeField]
 	public IntParamEvent ChangeHp;
+
+	private bool _godMode = false;
+	private float _godModeTime = 0f;
 
 	public void Awake()
 	{
@@ -30,6 +32,9 @@ public class HealthSystem : MonoBehaviour
 
 	public void GetDamage()
 	{
+		if(_godMode) return;
+		_godMode = true;
+		_godModeTime = GodModeTimeAfterDamage;
 		_hp--;
 		ChangeHp?.Invoke(_hp);
 
@@ -55,5 +60,17 @@ public class HealthSystem : MonoBehaviour
 		}
 
 		seq.OnComplete(() => _beeSpriteRenderer.DOColor(baseColor, 0.1f));
+	}
+
+	private void Update()
+	{
+		if (_godMode)
+		{
+			_godModeTime -= Time.deltaTime;
+			if (_godModeTime < 0)
+			{
+				_godMode = false;
+			}
+		}
 	}
 }

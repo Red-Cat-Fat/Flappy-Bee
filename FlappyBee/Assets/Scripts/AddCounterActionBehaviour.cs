@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class AddScoreAction : Action
+public class AddCounterActionBehaviour : ActionBehaviour
 {
 		[SerializeField]
 		private int _addScore = 1;

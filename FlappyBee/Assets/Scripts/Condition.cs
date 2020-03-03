@@ -4,7 +4,7 @@ using UnityEngine.Events;
 
 public abstract class Condition : MonoBehaviour
 {
-	public Action[] Actions = new Action[0];
+	public ActionBehaviour[] Actions = new ActionBehaviour[0];
 	public string FilterTag;
 
 	public void ExecuteAllActions(GameObject dataObject)

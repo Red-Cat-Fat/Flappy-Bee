@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class CounterUpdateView : MonoBehaviour
@@ -11,7 +10,7 @@ public class CounterUpdateView : MonoBehaviour
 
 	private void Awake()
 	{
-		_counterScriptableObject.UpdateScore.AddListener(UpdateCounter);
+		_counterScriptableObject.UpdateScore += UpdateCounter;
 	}
 
 	private void OnEnable()
