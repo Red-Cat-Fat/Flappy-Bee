@@ -9,6 +9,11 @@ public class GameOverWindow : MonoBehaviour
 		[SerializeField]
 		private Text _scoreText;
 
+		public void Show()
+		{
+			gameObject.SetActive(true);
+		}
+
 		public void SetScore(int score)
 		{
 				_scoreText.text = $"Total score: {score}";

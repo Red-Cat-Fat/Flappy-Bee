@@ -5,10 +5,12 @@ using UnityEngine;
 public class AddScoreAction : Action
 {
 		[SerializeField]
-		private int _score = 1;
+		private int _addScore = 1;
+		[SerializeField]
+		private CounterScriptableObject _scoreCounter;
+
 		protected override void DoExecute(GameObject other)
 		{
-				var playerData = other.GetComponentInParent<PlayerData>();
-				playerData?.AddScore(_score);
+			_scoreCounter.AddValue(_addScore);
 		}
 }

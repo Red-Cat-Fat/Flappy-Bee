@@ -10,24 +10,39 @@ public class HpBar : MonoBehaviour
 		private GameObject _defaultHealthPointIconPrefab;
 		private GameObject[] _healthPointIcons;
 
-		public void UpdateHp(int countHealth)
+		private void TryInitializeHealthPoints(int countHealth)
 		{
-				if(_healthPointIcons == null || _healthPointIcons.Length < countHealth)
+			if (_healthPointIcons != null && _healthPointIcons.Length < countHealth)
+			{
+				for (var i = 0; i < _healthPointIcons.Length; i++)
 				{
-						_healthPointIcons = new GameObject[countHealth];
-						for (int i = 0; i < countHealth; i++)
-						{
-								_healthPointIcons[i] = Instantiate(_defaultHealthPointIconPrefab, this.transform);
-						}
+					Destroy(_healthPointIcons[i]);
 				}
 
-				if (countHealth >= 0)
+				_healthPointIcons = null;
+			}
+
+			if(_healthPointIcons == null)
+			{
+				_healthPointIcons = new GameObject[countHealth];
+				for (int i = 0; i < countHealth; i++)
 				{
-						for (int i = countHealth; i < _healthPointIcons.Length; i++)
-						{
-								AnimateIconDestroy(_healthPointIcons[i]);
-						}
+					_healthPointIcons[i] = Instantiate(_defaultHealthPointIconPrefab, this.transform);
 				}
+			}
+		}
+
+		public void UpdateHp(int countHealth)
+		{
+			TryInitializeHealthPoints(countHealth);
+
+			if (countHealth >= 0)
+			{
+				for (int i = countHealth; i < _healthPointIcons.Length; i++)
+				{
+					AnimateIconDestroy(_healthPointIcons[i]);
+				}
+			}
 		}
 
 		private void AnimateIconDestroy(GameObject icon)

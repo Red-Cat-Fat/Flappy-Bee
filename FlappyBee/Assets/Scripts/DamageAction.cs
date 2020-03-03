@@ -1,19 +1,27 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
+[RequireComponent(typeof(HealthSystem))]
 public class DamageAction : Action
 {
 		private bool _godMode = false;
 		private float _godModeTime = 0f;
+		private HealthSystem _healthSystem;
+
+		private void Awake()
+		{
+			_healthSystem = gameObject.GetComponent<HealthSystem>();
+		}
+
 		protected override void DoExecute(GameObject other)
 		{
 				if (_godMode) return;
-				var playerData = gameObject.GetComponent<PlayerData>();
-				playerData.GetDamage();
+				_healthSystem.GetDamage();
 				_godMode = true;
-				_godModeTime = playerData.GodModeTimeAfterDamage;
+				_godModeTime = _healthSystem.GodModeTimeAfterDamage;
 		}
 
 		private void Update()
